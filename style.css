@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Bricolage+Grotesque&family=Fuggles&family=Lato:wght@700&family=Poppins:wght@500&family=Roboto&family=Roboto+Slab:wght@600&family=Rubik:wght@500&family=Tilt+Neon&family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+/* main Home Page */
+
+
+/* search Page */
+body{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+#logo::selection{
+    color: black;
+    background-color: rgb(0, 255, 153);
+}
+#logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5vh 3vh;
+    border-radius: 60px;
+    color: white;
+    margin: 20px;
+}
+.imgs{
+    width: 44vh;
+    height: 43vh;
+    object-fit: cover;
+}
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    
+    flex-direction: column;
+}
+.nav{
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+}
+.space{
+    height: 140px;
+    width: 100%;
+}
+.bg{
+    background-color: rgb(242, 255, 0);
+    width: 100%;
+}
+.nav-content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-container{
+    width: 100%;
+    padding: 5vh 0vh;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+#searchinp{
+    font-size: 1.5rem;
+    font-family: 'Asap', sans-serif;
+    padding: 5px 7px;
+    width: 47vh;
+    height: 6vh;
+    border-radius: 10px 0px 0px 10px;
+    /* border: 2px 2px 0px 2px solid black; */
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.577);
+    border: none;
+    color: white;
+    box-shadow: 0px 10px 20px rgb(0, 0, 0);
+    
+}
+#searchbtn{
+    font-size: 1.5rem;
+    font-family: 'Asap', sans-serif;
+    padding: 1.5vh 12px;
+    width: 15vh;
+    outline: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(0, 255, 174);
+    box-shadow: 0px 10px 20px black;
+}
+.res{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 40px;
+}
+.result-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    background-color: rgba(0, 0, 0, 0.171);
+    transition: all 0.8s;
+}
+.card{
+    margin: 1.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.8s;
+}
+.card button{
+    padding: 7px 10px;
+    background-color: rgb(255, 238, 0);
+    border: 0;
+    top: 0;
+    left: 0;
+    margin: 6px;
+    outline: none;
+    position: absolute;
+    transition: all 0.8s;
+}
+.card:hover .data{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.752);
+}
+.card svg{
+    width: 4vh;
+    height: 4vh;
+    stroke-width: 2;
+}
+.data{
+    display: none;
+    position: absolute;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    height: 43vh;
+    bottom: 0;
+    left: 0;
+    
+}
+.data h3{
+    color: rgb(255, 255, 255);
+    bottom: 0;
+    position: absolute;
+    padding: 5px 1px;
+    padding-bottom: 10px;
+    max-height: 25vh;
+    overflow: auto;
+    display: flex;
+    text-align: center;
+}
+.data h3::-webkit-scrollbar{
+    display: none;
+}
+#showmore{
+    font-size: 1.2rem;
+    padding: 1.1vh 2vh;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.589);
+    background-color: yellow;
+    margin-top: 2vh ;
+    margin-bottom: 2vh;
+    display: none;
+}
+.logo-cont{
+    padding: 2px;
+}
+/* login Page */
+
+
+/* Navbar */
+::-webkit-scrollbar {
+    width: 12px;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #f2ff00;
+    border: 2px solid yellow;
+  }
+  ::-webkit-scrollbar-track{
+    background: #000000;
+  }
+  
+  ::-webkit-scrollbar-track:hover {
+    background: #b300ff; 
+  }
+
+
+
+  /* media query lihaychay */
+  @media screen and (max-width:800px) {
+    #searchinp,#searchbtn{
+        margin-top: 30px;
+    }
+  }
+  @media screen and (max-width:600px) {
+    #searchinp{
+        /* width: 36vh; 
+        */
+        font-size: 1.2rem;
+        width: 60%;
+    }
+    #searchbtn{
+        /* width: 12vh; */
+        width: 25%;
+        font-size: 1.1rem;
+    }
+  }
+  @media screen and (max-width:290px) {
+    #searchinp{
+        /* width: 36vh; 
+        */
+        font-size: 1.2rem;
+        width: 60%;
+    }
+    #searchbtn{
+        /* width: 12vh; */
+        width: 25%;
+        font-size: 0.9rem;
+    }
+  }
